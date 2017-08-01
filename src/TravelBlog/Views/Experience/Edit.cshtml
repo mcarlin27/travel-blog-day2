@@ -14,7 +14,7 @@
     @Html.LabelFor(model => model.Description)
     @Html.EditorFor(model => model.Description)
 
-    @Html.LabelFor(model => model.LocationId)
+    @Html.LabelFor(model => model.LocationId, "Location")
     @Html.DropDownList("LocationId")
 
     <input type="submit" value="Save" class="btn btn-default" />

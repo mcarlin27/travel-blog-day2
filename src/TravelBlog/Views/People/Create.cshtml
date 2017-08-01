@@ -1,10 +1,10 @@
-﻿@model TravelBlog.Models.Experience
+﻿@model TravelBlog.Models.People
 
 @{
-    ViewData["Title"] = "experience - Create";
+    ViewData["Title"] = "people - Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Create a new experience</h2>
+<h2>Create a new people</h2>
 <hr />
 
 @using (Html.BeginForm())
@@ -12,8 +12,8 @@
     @Html.LabelFor(model => model.Description)
     @Html.EditorFor(model => model.Description)
 
-    @Html.LabelFor(model => model.Location, "Location: ") 
-    @Html.DropDownList("LocationId")
+    @Html.LabelFor(model => model.Experiences, "Experience: ")
+    @Html.DropDownList("ExperienceId")
 
     <input type="submit" value="Create" class="btn btn-default" />
 }

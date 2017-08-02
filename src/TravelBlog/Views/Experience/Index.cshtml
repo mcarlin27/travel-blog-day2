@@ -12,7 +12,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Location.Name)
+            @Html.DisplayNameFor(model => model.Location)
         </th>
         <th></th>
     </tr>
@@ -28,13 +28,11 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = listExperience.ExperienceId }) |
-                @Html.ActionLink("Details", "Details", new { id = listExperience.ExperienceId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = listExperience.ExperienceId })
+                @Html.ActionLink("Delete", "Delete", new { id = listExperience.ExperienceId }) |
+                @Html.ActionLink("Details", "Details", new { id = listExperience.ExperienceId })
             </td>
         </tr>
     }
 </table>
-<p>
-    @Html.ActionLink("Create New", "Create")
-    @Html.ActionLink("Home page", "Index", "Location")
-</p>
+<p>@Html.ActionLink("Add new experience", "Create")</p>
+<p>@*@Html.ActionLink("Return to list view", "Index")*@</p>

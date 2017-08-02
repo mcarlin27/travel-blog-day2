@@ -11,9 +11,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Location.Name)
-        </th>*@
         <th></th>
     </tr>
 
@@ -32,9 +29,5 @@
         </tr>
     }
 </table>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<p>
-    @Html.ActionLink("Home page", "Index", "Location")
-</p>
+<p>@Html.ActionLink("Add new person", "Create")</p>
+@*<p>@Html.ActionLink("Return to list view", "Index", "Location")</p>*@

@@ -4,7 +4,7 @@
     ViewData["Title"] = "People";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>To Do List</h2>
+<h2>People</h2>
 <hr />
 <table class="table">
     <tr>
@@ -26,14 +26,15 @@
 
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = listPeople.PeopleId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = listPeople.PeopleId })
+                @Html.ActionLink("Delete", "Delete", new { id = listPeople.PeopleId }) |
+                @Html.ActionLink("Details", "Details", new { id = listPeople.PeopleId})
             </td>
         </tr>
     }
 </table>
 <p>
     @Html.ActionLink("Create New", "Create")
+</p>
+<p>
     @Html.ActionLink("Home page", "Index", "Location")
-
-
 </p>

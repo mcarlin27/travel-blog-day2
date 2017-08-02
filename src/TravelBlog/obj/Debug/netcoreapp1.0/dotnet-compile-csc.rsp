@@ -218,6 +218,8 @@
 "C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Migrations\20170802165814_AddPeoplePropertyToLocation.Designer.cs"
 "C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Migrations\20170802174448_RemovePeoplePropertyFromLocation.cs"
 "C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Migrations\20170802174448_RemovePeoplePropertyFromLocation.Designer.cs"
+"C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Migrations\20170802202721_PeopleExperienceIsNowSingular.cs"
+"C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Migrations\20170802202721_PeopleExperienceIsNowSingular.Designer.cs"
 "C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Migrations\TravelBlogContextModelSnapshot.cs"
 "C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Models\Experience.cs"
 "C:\Users\epicodus\Desktop\travel-blog-day2\src\TravelBlog\Models\Location.cs"

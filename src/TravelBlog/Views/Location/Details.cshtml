@@ -19,8 +19,7 @@
     
         @foreach(var people in experience.People)
         {
-            <p><a href=/people/Details/@Html.DisplayFor(model => people.PeopleId)>@Html.DisplayFor(model => people.Description)</a></p>
+            @Html.ActionLink(@people.Description, "Details", "People", new { id = people.PeopleId })
         }
     </div>
 }
-

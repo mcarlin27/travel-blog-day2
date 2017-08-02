@@ -12,8 +12,15 @@
     @foreach (var people in Model.People)
     {
 
-        <li>@Html.LabelFor(model => people.Description, "Name: ") <a href=/people/Details/@Html.DisplayFor(model =>people.PeopleId)>@Html.DisplayFor(model => people.Description)</a></li>
+        <li>@Html.LabelFor(model => people.Description, "Name: ") <a href=/people/Details/@Html.DisplayFor(model => people.PeopleId)>@Html.DisplayFor(model => people.Description)</a></li>
 
 
     }
 </ul>
+
+<h4>Location of this experience:</h4>
+<p>
+    @Html.Label("Location: ") 
+    
+    @Html.ActionLink(@Model.Location.Name, "Details", "Location", new { id = Model.LocationId } )
+</p>

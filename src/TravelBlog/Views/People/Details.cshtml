@@ -8,4 +8,12 @@
 <h2>Person Details</h2>
 <hr />
 <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
-<p>@Html.ActionLink("Back to people", "Index", "People")</p>
+
+<h4>Experiences I've shared with this person:</h4>
+
+@Html.LabelFor(model => Model.Experiences.Description, "Description: ")
+       
+<p>@Html.ActionLink(@Model.Experiences.Description, "Details", "Experience", new { id = Model.ExperienceId })</p>
+
+
+<p>@Html.ActionLink("Back to list view", "Index", "People")</p>

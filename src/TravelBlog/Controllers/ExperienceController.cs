@@ -66,7 +66,9 @@ namespace TravelBlog.Controllers
         }
         public IActionResult Details(int id)
         {
-            Experience thisExperience = db.Experiences.Include(experiences => experiences.People).FirstOrDefault(experiences => experiences.ExperienceId == id);
+            Experience thisExperience = db.Experiences.Include(experiences => experiences.People)
+                                                      .Include(experience => experience.Location)
+                                                      .FirstOrDefault(experiences => experiences.ExperienceId == id);
             return View(thisExperience);
         }
     }

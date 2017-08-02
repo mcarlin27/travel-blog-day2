@@ -17,7 +17,8 @@ namespace TravelBlog.Controllers
 
         public IActionResult Details(int id)
         {
-            People thisPeople = db.People.FirstOrDefault(person => person.PeopleId == id);
+            People thisPeople = db.People.Include(people => people.Experiences)
+                                         .FirstOrDefault(person => person.PeopleId == id);
             return View(thisPeople);
         }
 

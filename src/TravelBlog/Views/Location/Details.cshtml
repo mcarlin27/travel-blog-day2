@@ -9,20 +9,18 @@
 <hr />
 <h3>@Html.DisplayNameFor(thisLocation => thisLocation.Name): @Html.DisplayFor(thisLocation => thisLocation.Name)</h3>
 <h4>Experiences from this location:</h4>
-<ul>
-    @foreach (var item in Model.Experiences)
-    {
 
-    <li>@Html.LabelFor(model => item.Description, "Description: ") <a href=/experience/Details/@Html.DisplayFor(model => item.ExperienceId)>@Html.DisplayFor(model => item.Description)</a></li>
-
-
-    }
-</ul>
-<h4>People from this location:</h4>
-@foreach(var experience in Model.Experiences)
+@foreach (var experience in Model.Experiences)
 {
-    @foreach(var people in experience.People)
-    {
-        <p>@Html.DisplayFor(model => people.Description)</p>
-    }
+    <div class="well">
+        <h4><a href=/experience/Details/@Html.DisplayFor(model => experience.ExperienceId)>@Html.DisplayFor(model => experience.Description)</a></h4>
+
+        <h5>People from this experience:</h5>
+    
+        @foreach(var people in experience.People)
+        {
+            <p><a href=/people/Details/@Html.DisplayFor(model => people.PeopleId)>@Html.DisplayFor(model => people.Description)</a></p>
+        }
+    </div>
 }
+

@@ -8,8 +8,6 @@ namespace TravelBlog.Models
     [Table("Experiences")]
     public class Experience
     {
-        //[DisplayName("Location: ")]
-        //public string DisplayLocation { get; set; }
         public Experience()
         {
             this.People = new HashSet<People>();

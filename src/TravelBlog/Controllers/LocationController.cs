@@ -63,7 +63,10 @@ namespace TravelBlog.Controllers
 
         public IActionResult Details(int id)
         {
-            Location thisLocation = db.Locations.Include(locations => locations.Experiences).FirstOrDefault(locations => locations.LocationId == id);
+            Location thisLocation = db.Locations.Include(location => location.Experiences)
+                                                .ThenInclude(experience => experience.People)
+                                                .FirstOrDefault(location => location.LocationId == id);
+
             return View(thisLocation);
         }
     }

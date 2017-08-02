@@ -4,16 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<body>
-    <h2>Experience Details</h2>
-    <hr />
-    <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
-    @*@foreach (var item in Model.People)
+<h2>Experience Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(thisExperience => thisExperience.Description): @Html.DisplayFor(thisExperience => thisExperience.Description)</h3>
+<h4>People from this experience:</h4>
+<ul>
+    @foreach (var people in Model.People)
     {
 
-        <p>@Html.LabelFor(model => item.Description, "Name: ") @Html.DisplayFor(model => item.Description)</p>
+        <li>@Html.LabelFor(model => people.Description, "Name: ") <a href=/people/Details/@Html.DisplayFor(model =>people.PeopleId)>@Html.DisplayFor(model => people.Description)</a></li>
 
-    }*@
 
-</body>
+    }
+</ul>

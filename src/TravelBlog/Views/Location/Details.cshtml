@@ -5,26 +5,24 @@
 }
 
 
-<body>
-    <h2>Location Details</h2>
-    <hr />
-    <h3>@Html.DisplayNameFor(thisLocation => thisLocation.Name): @Html.DisplayFor(thisLocation => thisLocation.Name)</h3>
-    <h4>Experiences from this location:</h4>
-    <ul>
-        @foreach (var item in Model.Experiences)
-        {
-
-        <li>@Html.LabelFor(model => item.Description, "Description: ") <a href=/experience/Details/@Html.DisplayFor(model => item.ExperienceId)>@Html.DisplayFor(model => item.Description)</a></li>
-
-
-        }
-    </ul>
-    <h4>People from this location:</h4>
-    @foreach(var experience in Model.Experiences)
+<h2>Location Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(thisLocation => thisLocation.Name): @Html.DisplayFor(thisLocation => thisLocation.Name)</h3>
+<h4>Experiences from this location:</h4>
+<ul>
+    @foreach (var item in Model.Experiences)
     {
-        @foreach(var people in experience.People)
-        {
-            <p>@Html.DisplayFor(model => people.Description)</p>
-        }
+
+    <li>@Html.LabelFor(model => item.Description, "Description: ") <a href=/experience/Details/@Html.DisplayFor(model => item.ExperienceId)>@Html.DisplayFor(model => item.Description)</a></li>
+
+
     }
-</body>
+</ul>
+<h4>People from this location:</h4>
+@foreach(var experience in Model.Experiences)
+{
+    @foreach(var people in experience.People)
+    {
+        <p>@Html.DisplayFor(model => people.Description)</p>
+    }
+}

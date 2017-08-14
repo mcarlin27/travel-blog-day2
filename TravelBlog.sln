@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TravelBlog", "src\TravelBlog\TravelBlog.xproj", "{4742107E-2036-41B2-A3B5-807F769F8C5A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5ECBD1EE-CCA2-4FF1-A38A-810EE0D3B582}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TravelBlog.Tests", "TravelBlog.Tests\TravelBlog.Tests.xproj", "{36D7BCC7-E636-4BD6-834A-7055D6D002F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{4742107E-2036-41B2-A3B5-807F769F8C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4742107E-2036-41B2-A3B5-807F769F8C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4742107E-2036-41B2-A3B5-807F769F8C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D7BCC7-E636-4BD6-834A-7055D6D002F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D7BCC7-E636-4BD6-834A-7055D6D002F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D7BCC7-E636-4BD6-834A-7055D6D002F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D7BCC7-E636-4BD6-834A-7055D6D002F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4742107E-2036-41B2-A3B5-807F769F8C5A} = {2EF5B136-9D79-4285-88DA-BCB689ED5775}
+		{36D7BCC7-E636-4BD6-834A-7055D6D002F4} = {5ECBD1EE-CCA2-4FF1-A38A-810EE0D3B582}
 	EndGlobalSection
 EndGlobal

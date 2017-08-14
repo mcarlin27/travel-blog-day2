@@ -10,14 +10,30 @@ namespace TravelBlog.Models
         public Location()
         {
             this.Experiences = new HashSet<Experience>();
-            //this.People = new HashSet<People>();
         }
         [Key]
         public int LocationId { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<Experience> Experiences { get; set; }
-        //public virtual ICollection<People> People { get; set; }
+
+        public override bool Equals(System.Object otherLocation)
+        {
+            if (!(otherLocation is Location))
+            {
+                return false;
+            }
+            else
+            {
+                Location newLocation = (Location)otherLocation;
+                return this.LocationId.Equals(newLocation.LocationId);
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return this.LocationId.GetHashCode();
+        }
 
     }
 }
